@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey_app/LoginPage.dart';
+import 'package:meal_monkey_app/NewPasswordPage.dart';
+import 'package:meal_monkey_app/OTPPage.dart';
 import 'package:meal_monkey_app/ResetPasswordPage.dart';
 import 'package:meal_monkey_app/SignUpPage.dart';
 import 'package:meal_monkey_app/StartPage.dart';
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
-      home: ResetPasswordPage(),
+      home: NewPasswordPage(),
       debugShowCheckedModeBanner: false,
     );
   }
