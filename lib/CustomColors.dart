@@ -8,4 +8,5 @@ class CustomColors {
   static Color placeholder = Color(0xffb6b7b7);
   static Color blue = Color(0xff367FC0);
   static Color red = Color(0xffDD4B39);
+  static Color grey = Color(0xffF2F2F2);
 }

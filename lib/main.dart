@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey_app/LoginPage.dart';
 import 'package:meal_monkey_app/StartPage.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
-      home: StartPage(),
+      home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }

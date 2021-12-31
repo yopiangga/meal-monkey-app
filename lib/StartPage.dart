@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey_app/CustomColors.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 
 class StartPage extends StatelessWidget {
   // const StartPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: CustomColors.main.withOpacity(1),
-    ));
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: CustomColors.main.withOpacity(1),
+    // ));
     return Scaffold(
         body: ListView(
       children: [
@@ -77,7 +77,8 @@ class StartPage extends StatelessWidget {
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0),
-                        side: BorderSide(color: CustomColors.main, width: 2))),
+                        side:
+                            BorderSide(color: CustomColors.main, width: 1.5))),
                 padding:
                     MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(20)),
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
