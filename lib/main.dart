@@ -5,6 +5,7 @@ import 'package:meal_monkey_app/OTPPage.dart';
 import 'package:meal_monkey_app/ResetPasswordPage.dart';
 import 'package:meal_monkey_app/SignUpPage.dart';
 import 'package:meal_monkey_app/StartPage.dart';
+import 'package:meal_monkey_app/WelcomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
-      home: NewPasswordPage(),
+      home: WelcomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
