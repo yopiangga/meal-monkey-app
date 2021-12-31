@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
-      home: WelcomePage(),
+      home: StartPage(),
       debugShowCheckedModeBanner: false,
     );
   }

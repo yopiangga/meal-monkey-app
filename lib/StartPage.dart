@@ -14,17 +14,27 @@ class StartPage extends StatelessWidget {
         body: ListView(
       children: [
         Container(
-            height: MediaQuery.of(context).size.height * 2 / 3,
+            height: MediaQuery.of(context).size.height * 2 / 3 + 20,
             child: Stack(
               children: [
                 Positioned(
                   left: 0,
                   right: 0,
-                  bottom: 80,
-                  child: Image.asset(
-                    "assets/images/start-bg-shadow.png",
+                  child: Container(
+                    child: Image.asset(
+                      "assets/images/start-bg-shadow.png",
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
+                // Positioned(
+                //   left: 0,
+                //   right: 0,
+                //   bottom: 60,
+                //   child: Image.asset(
+                //     "assets/images/start-bg-shadow.png",
+                //   ),
+                // ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Image.asset(
