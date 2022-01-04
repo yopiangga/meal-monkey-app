@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/ResetPasswordPage.dart';
+import 'package:meal_monkey_app/screens/WelcomePage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -79,7 +81,12 @@ class LoginPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return WelcomePage();
+                  }));
+                },
                 child: Text(
                   "Login",
                   style: TextStyle(
@@ -102,7 +109,12 @@ class LoginPage extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 20),
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return ResetPasswordPage();
+                  }));
+                },
                 child: Text(
                   "Forgot your password ?",
                   style: TextStyle(

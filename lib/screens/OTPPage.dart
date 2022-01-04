@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/NewPasswordPage.dart';
 
 class OTPPage extends StatelessWidget {
   const OTPPage({Key? key}) : super(key: key);
@@ -138,7 +139,12 @@ class OTPPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return NewPasswordPage();
+                  }));
+                },
                 child: Text(
                   "Next",
                   style: TextStyle(

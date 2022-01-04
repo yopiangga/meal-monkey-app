@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/OTPPage.dart';
 
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({Key? key}) : super(key: key);
@@ -58,7 +59,12 @@ class ResetPasswordPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return OTPPage();
+                  }));
+                },
                 child: Text(
                   "Send",
                   style: TextStyle(

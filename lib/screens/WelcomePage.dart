@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/MainPage.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -105,6 +106,12 @@ class _WelcomePageState extends State<WelcomePage> {
                     setState(() {
                       navigasi = navigasi + 1;
                     });
+                  }
+                  if (navigasi == 2) {
+                    Navigator.of(context)
+                        .pushReplacement(MaterialPageRoute(builder: (context) {
+                      return MainPage();
+                    }));
                   }
                 },
                 child: Text(

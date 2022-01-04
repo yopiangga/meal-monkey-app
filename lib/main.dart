@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/LoginPage.dart';
-import 'package:meal_monkey_app/NewPasswordPage.dart';
-import 'package:meal_monkey_app/OTPPage.dart';
-import 'package:meal_monkey_app/ResetPasswordPage.dart';
-import 'package:meal_monkey_app/SignUpPage.dart';
-import 'package:meal_monkey_app/StartPage.dart';
-import 'package:meal_monkey_app/WelcomePage.dart';
+import 'package:meal_monkey_app/providers/PBottomNavBar.dart';
+import 'package:meal_monkey_app/screens/LoginPage.dart';
+import 'package:meal_monkey_app/screens/MainPage.dart';
+import 'package:meal_monkey_app/screens/NewPasswordPage.dart';
+import 'package:meal_monkey_app/screens/OTPPage.dart';
+import 'package:meal_monkey_app/screens/ResetPasswordPage.dart';
+import 'package:meal_monkey_app/screens/SignUpPage.dart';
+import 'package:meal_monkey_app/screens/StartPage.dart';
+import 'package:meal_monkey_app/screens/WelcomePage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
-      home: StartPage(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<PBottomNavBar>(
+              create: (context) => PBottomNavBar()),
+        ],
+        child: MainPage(),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

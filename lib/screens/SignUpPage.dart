@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/LoginPage.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -163,7 +164,12 @@ class SignUpPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return LoginPage();
+                  }));
+                },
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
@@ -195,6 +201,12 @@ class SignUpPage extends StatelessWidget {
                     width: 5,
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) {
+                        return LoginPage();
+                      }));
+                    },
                     child: Text(
                       "Login",
                       style: TextStyle(

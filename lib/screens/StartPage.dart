@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/LoginPage.dart';
+import 'package:meal_monkey_app/screens/SignUpPage.dart';
 // import 'package:flutter/services.dart';
 
 class StartPage extends StatelessWidget {
@@ -53,7 +55,12 @@ class StartPage extends StatelessWidget {
         Container(
             padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .pushReplacement(MaterialPageRoute(builder: (context) {
+                  return LoginPage();
+                }));
+              },
               child: Text(
                 "Login",
                 style: TextStyle(
@@ -74,8 +81,14 @@ class StartPage extends StatelessWidget {
             )),
         Container(
             padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
+            margin: EdgeInsets.only(bottom: 20),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .pushReplacement(MaterialPageRoute(builder: (context) {
+                  return SignUpPage();
+                }));
+              },
               child: Text(
                 "Create an Account",
                 style: TextStyle(

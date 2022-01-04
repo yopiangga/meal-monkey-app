@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_app/CustomColors.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
+import 'package:meal_monkey_app/screens/LoginPage.dart';
 
 class NewPasswordPage extends StatelessWidget {
   const NewPasswordPage({Key? key}) : super(key: key);
@@ -79,7 +80,12 @@ class NewPasswordPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return LoginPage();
+                  }));
+                },
                 child: Text(
                   "Submit",
                   style: TextStyle(
