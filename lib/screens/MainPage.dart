@@ -4,6 +4,7 @@ import 'package:meal_monkey_app/widgets/BottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/ListCategoryFood.dart';
 import 'package:meal_monkey_app/widgets/ListMostPopular.dart';
 import 'package:meal_monkey_app/widgets/ListPopularRestaurent.dart';
+import 'package:meal_monkey_app/widgets/ListRecentItem.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -176,6 +177,32 @@ class _MainPageState extends State<MainPage> {
                     margin: EdgeInsets.only(bottom: 10),
                     padding: EdgeInsets.fromLTRB(20, 10, 0, 10),
                     child: ListMostPopular(),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Row(
+                      children: [
+                        Flexible(
+                            fit: FlexFit.tight,
+                            child: Text(
+                              "Recent Items",
+                              style: TextStyle(fontSize: 26),
+                            )),
+                        TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "View all",
+                              style: TextStyle(color: CustomColors.main),
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    // height: 140,
+                    margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: ListRecentItem(),
                   ),
                 ],
               ),
