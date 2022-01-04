@@ -44,8 +44,7 @@ class WPopularRestaurent extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "(${item?.ratings.toString()} ratings)" ??
-                            "(0 ratings)",
+                        "(${item?.ratings.toString()} ratings)",
                         style: TextStyle(color: CustomColors.secondary),
                       ),
                       SizedBox(

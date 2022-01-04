@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey_app/customs/CustomColors.dart';
 import 'package:meal_monkey_app/widgets/BottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/ListCategoryFood.dart';
+import 'package:meal_monkey_app/widgets/ListMostPopular.dart';
 import 'package:meal_monkey_app/widgets/ListPopularRestaurent.dart';
 
 class MainPage extends StatefulWidget {
@@ -149,7 +150,33 @@ class _MainPageState extends State<MainPage> {
                     margin: EdgeInsets.only(bottom: 10),
                     padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
                     child: ListPopularRestaurent(),
-                  )
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Row(
+                      children: [
+                        Flexible(
+                            fit: FlexFit.tight,
+                            child: Text(
+                              "Most Popular",
+                              style: TextStyle(fontSize: 20),
+                            )),
+                        TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "View all",
+                              style: TextStyle(color: CustomColors.main),
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.width * 2 / 3,
+                    margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: ListMostPopular(),
+                  ),
                 ],
               ),
               Center(
