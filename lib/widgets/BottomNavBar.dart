@@ -5,12 +5,17 @@ import 'package:provider/provider.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar(
-      {Key? key, this.icon = Icons.home, this.title = "", this.index = 0})
+      {Key? key,
+      this.icon = Icons.home,
+      this.title = "",
+      this.index = 0,
+      this.tabController})
       : super(key: key);
 
   final IconData icon;
   final String title;
   final int index;
+  final TabController? tabController;
 
   // BottomNavBar({this.icon = Icon(Icons.ac_unit), this.title = "", this.index = 0});
 
@@ -21,6 +26,7 @@ class BottomNavBar extends StatelessWidget {
               onTap: () {
                 value.setMenuActive = index;
                 ChangeNotifier();
+                tabController?.animateTo(index);
               },
               child: Container(
                   height: 60,
