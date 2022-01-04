@@ -35,10 +35,10 @@ class BottomNavBar extends StatelessWidget {
                             color: value.isMenuActive == index
                                 ? CustomColors.main
                                 : CustomColors.placeholder),
-                        SizedBox(height: 2),
+                        SizedBox(height: 4),
                         Text(title.toString(),
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 12,
                               color: value.isMenuActive == index
                                   ? CustomColors.main
                                   : CustomColors.placeholder,

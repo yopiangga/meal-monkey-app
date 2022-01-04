@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey_app/customs/CustomColors.dart';
 import 'package:meal_monkey_app/providers/PBottomNavBar.dart';
+import 'package:meal_monkey_app/providers/PCategoryFood.dart';
+import 'package:meal_monkey_app/providers/PPopularRestaurent.dart';
 import 'package:meal_monkey_app/screens/LoginPage.dart';
 import 'package:meal_monkey_app/screens/MainPage.dart';
 import 'package:meal_monkey_app/screens/NewPasswordPage.dart';
@@ -22,10 +25,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meal Monkey',
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText2: TextStyle(
+            color: CustomColors.primary,
+          ),
+        ),
+      ),
       home: MultiProvider(
         providers: [
-          ChangeNotifierProvider<PBottomNavBar>(
-              create: (context) => PBottomNavBar()),
+          ChangeNotifierProvider(create: (context) => PBottomNavBar()),
+          ChangeNotifierProvider(create: (context) => PCategoryFood()),
+          ChangeNotifierProvider(create: (context) => PPopularRestaurent())
         ],
         child: MainPage(),
       ),
