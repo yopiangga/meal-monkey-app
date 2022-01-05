@@ -3,6 +3,7 @@ import 'package:meal_monkey_app/customs/CustomColors.dart';
 import 'package:meal_monkey_app/providers/PBottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/BottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/ListCategoryFood.dart';
+import 'package:meal_monkey_app/widgets/ListMenuFood.dart';
 import 'package:meal_monkey_app/widgets/ListMostPopular.dart';
 import 'package:meal_monkey_app/widgets/ListPopularRestaurent.dart';
 import 'package:meal_monkey_app/widgets/ListRecentItem.dart';
@@ -245,14 +246,44 @@ class _MainPageState extends State<MainPage>
                   ),
                 ],
               ),
-              Center(
-                  child: Text(
-                "Page Offer",
-                style: TextStyle(
-                    color: CustomColors.secondary,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              )),
+              ListView(
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  WSearchFood(),
+                  Container(
+                      // color: CustomColors.main,
+                      margin: EdgeInsets.only(bottom: 10),
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: 0,
+                            bottom: 0,
+                            child: Container(
+                              width: 120,
+                              decoration: BoxDecoration(
+                                color: CustomColors.main,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(0),
+                                  bottomLeft: Radius.circular(0),
+                                  topRight: Radius.circular(50),
+                                  bottomRight: Radius.circular(50),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 30, bottom: 10),
+                            width: MediaQuery.of(context).size.width,
+                            padding: EdgeInsets.only(left: 20, right: 10),
+                            child: ListMenuFood(),
+                          ),
+                        ],
+                      )),
+                ],
+              ),
               Center(
                   child: Text(
                 "Page Home",
