@@ -6,6 +6,7 @@ import 'package:meal_monkey_app/providers/PMenuFood.dart';
 import 'package:meal_monkey_app/providers/PMostPopular.dart';
 import 'package:meal_monkey_app/providers/PPopularRestaurent.dart';
 import 'package:meal_monkey_app/providers/PRecentItem.dart';
+import 'package:meal_monkey_app/providers/PSubMenuFood.dart';
 import 'package:meal_monkey_app/screens/LoginPage.dart';
 import 'package:meal_monkey_app/screens/MainPage.dart';
 import 'package:meal_monkey_app/screens/NewPasswordPage.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (context) => PMostPopular()),
           ChangeNotifierProvider(create: (context) => PRecentItem()),
           ChangeNotifierProvider(create: (context) => PMenuFood()),
+          ChangeNotifierProvider(create: (context) => PSubMenuFood()),
         ],
         child: MainPage(),
       ),

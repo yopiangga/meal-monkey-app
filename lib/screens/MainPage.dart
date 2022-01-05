@@ -7,6 +7,7 @@ import 'package:meal_monkey_app/widgets/ListMenuFood.dart';
 import 'package:meal_monkey_app/widgets/ListMostPopular.dart';
 import 'package:meal_monkey_app/widgets/ListPopularRestaurent.dart';
 import 'package:meal_monkey_app/widgets/ListRecentItem.dart';
+import 'package:meal_monkey_app/widgets/ListSubmenuFood.dart';
 import 'package:meal_monkey_app/widgets/WSearchFood.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +34,7 @@ class _MainPageState extends State<MainPage>
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = new TabController(length: 5, vsync: this);
+    _tabController = new TabController(length: 6, vsync: this);
   }
 
   @override
@@ -46,7 +47,7 @@ class _MainPageState extends State<MainPage>
   Widget build(BuildContext context) {
     final menuActive = Provider.of<PBottomNavBar>(context).isMenuActive;
     return DefaultTabController(
-        length: 5,
+        length: 6,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -120,21 +121,6 @@ class _MainPageState extends State<MainPage>
             children: [
               ListView(
                 children: [
-                  // Container(
-                  //     margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                  //     padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  //     child: Row(
-                  //       children: [
-                  //         Flexible(
-                  //             fit: FlexFit.tight,
-                  //             child: Text(
-                  //               "Good morning Yopiangga",
-                  //               style: TextStyle(
-                  //                   fontSize: 20, fontWeight: FontWeight.bold),
-                  //             )),
-                  //         Icon(Icons.shopping_cart_rounded)
-                  //       ],
-                  //     )),
                   Container(
                     margin: EdgeInsets.only(bottom: 10, top: 10),
                     padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -278,7 +264,9 @@ class _MainPageState extends State<MainPage>
                             margin: EdgeInsets.only(top: 30, bottom: 10),
                             width: MediaQuery.of(context).size.width,
                             padding: EdgeInsets.only(left: 20, right: 10),
-                            child: ListMenuFood(),
+                            child: ListMenuFood(
+                              tabController: _tabController,
+                            ),
                           ),
                         ],
                       )),
@@ -308,6 +296,17 @@ class _MainPageState extends State<MainPage>
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               )),
+              ListView(
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  WSearchFood(),
+                  Container(
+                    child: ListSubMenuFood(),
+                  )
+                ],
+              )
             ],
           ),
         ));
