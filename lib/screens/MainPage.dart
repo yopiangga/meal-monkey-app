@@ -302,14 +302,213 @@ class _MainPageState extends State<MainPage>
                   ),
                 ],
               ),
-              Center(
-                  child: Text(
-                "Page Profile",
-                style: TextStyle(
-                    color: CustomColors.secondary,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              )),
+              ListView(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Column(
+                        children: [
+                          Container(
+                              child: Image.asset("assets/images/user.png")),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text("Edit Profile",
+                                  style: TextStyle(color: CustomColors.main))),
+                          Text("Hi there Yopiangga!",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.w600)),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text("Sign out",
+                                  style: TextStyle(
+                                      color: CustomColors.placeholder))),
+                        ],
+                      )),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Column(
+                        children: [
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Name',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Email',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Mobile No',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Address',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Password',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            style: TextStyle(
+                                color: CustomColors.primary, fontSize: 16),
+                            cursorColor: CustomColors.secondary,
+                            decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                fillColor: CustomColors.grey,
+                                filled: true,
+                                hintText: 'Repeat Password',
+                                hintStyle:
+                                    TextStyle(color: CustomColors.placeholder),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    borderSide: BorderSide(
+                                        color:
+                                            CustomColors.main.withOpacity(0))),
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                          ),
+                        ],
+                      )),
+                  Container(
+                      margin: EdgeInsets.only(bottom: 20),
+                      padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Save",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  side: BorderSide(color: CustomColors.main))),
+                          padding: MaterialStateProperty.all<EdgeInsets>(
+                              EdgeInsets.all(20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              CustomColors.main),
+                        ),
+                      )),
+                ],
+              ),
               Center(
                   child: Text(
                 "Page More",
