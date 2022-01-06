@@ -3,6 +3,7 @@ import 'package:meal_monkey_app/customs/CustomColors.dart';
 import 'package:meal_monkey_app/providers/PBottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/BottomNavBar.dart';
 import 'package:meal_monkey_app/widgets/ListCategoryFood.dart';
+import 'package:meal_monkey_app/widgets/ListLatestOffer.dart';
 import 'package:meal_monkey_app/widgets/ListMenuFood.dart';
 import 'package:meal_monkey_app/widgets/ListMostPopular.dart';
 import 'package:meal_monkey_app/widgets/ListPopularRestaurent.dart';
@@ -272,14 +273,35 @@ class _MainPageState extends State<MainPage>
                       )),
                 ],
               ),
-              Center(
-                  child: Text(
-                "Page Home",
-                style: TextStyle(
-                    color: CustomColors.secondary,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              )),
+              ListView(
+                children: [
+                  // SizedBox(
+                  //   height: 10,
+                  // ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                    margin: EdgeInsets.only(bottom: 20),
+                    child:
+                        Text("Find discounts, Offers special meals and more!"),
+                  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    margin: EdgeInsets.only(bottom: 20),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Check Offers"),
+                      style: ElevatedButton.styleFrom(
+                        primary: CustomColors.main,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    child: ListLatestOffer(),
+                  ),
+                ],
+              ),
               Center(
                   child: Text(
                 "Page Profile",

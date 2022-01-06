@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey_app/customs/CustomColors.dart';
 import 'package:meal_monkey_app/providers/PBottomNavBar.dart';
 import 'package:meal_monkey_app/providers/PCategoryFood.dart';
+import 'package:meal_monkey_app/providers/PLatestOffer.dart';
 import 'package:meal_monkey_app/providers/PMenuFood.dart';
 import 'package:meal_monkey_app/providers/PMostPopular.dart';
 import 'package:meal_monkey_app/providers/PPopularRestaurent.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (context) => PRecentItem()),
           ChangeNotifierProvider(create: (context) => PMenuFood()),
           ChangeNotifierProvider(create: (context) => PSubMenuFood()),
+          ChangeNotifierProvider(create: (context) => PLatestOffer()),
         ],
         child: MainPage(),
       ),
